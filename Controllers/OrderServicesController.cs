@@ -10,6 +10,7 @@ using ExcelOnServices.Models;
 
 namespace ExcelOnServices.Controllers
 {
+    [Authorize]
     public class OrderServicesController : Controller
     {
         private ExcelOnServiceContext db = new ExcelOnServiceContext();

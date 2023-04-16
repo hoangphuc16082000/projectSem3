@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace ExcelOnServices.Controllers
 {
+    [Authorize(Users="admin@excelonservices.com")]
     public class ServicesController : Controller
     {
         private ExcelOnServiceContext db = new ExcelOnServiceContext();
