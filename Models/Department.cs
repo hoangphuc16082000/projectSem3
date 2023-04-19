@@ -18,5 +18,6 @@ namespace ExcelOnServices.Models
         [Required(ErrorMessage = "Contact person cannot be blank")]
         [Display(Name = "Contact person")]
         public string ContactPerson { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

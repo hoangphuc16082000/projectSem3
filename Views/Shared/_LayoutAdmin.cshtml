@@ -25,29 +25,26 @@
     <link href="~/assets/vendor/quill/quill.snow.css" rel="stylesheet">
     <link href="~/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    @*<link href="~/assets/vendor/simple-datatables/style.css" rel="stylesheet">*@
     <link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
     <!-- Template Main CSS File -->
     <link href="~/assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: NiceAdmin - v2.2.2
-    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    
     @RenderSection("css", required: false)
 </head>
 
 <body>
 
+
+
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="~/admin/index" class="logo d-flex align-items-center">
                 <img src="~/assets/img/icon.png" alt="">
                 <span class="d-none d-lg-block">Excel On Services</span>
+
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -146,68 +143,62 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
+                <a class="nav-link collapsed" href="">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
+            </li>
 
             <li class="nav-heading">Pages</li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="~/Departments/index">
-                    <i class="bi bi-person"></i>
+                    <i class="bi bi-bank"></i>
                     <span>Departments</span>
                 </a>
-            </li><!-- End Profile Page Nav -->
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="~/Employees/Index">
-                    <i class="bi bi-question-circle"></i>
+                    <i class="bi bi-person"></i>
                     <span>Employees</span>
                 </a>
-            </li><!-- End F.A.Q Page Nav -->
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="~/Services/index">
                     <i class="bi bi-envelope"></i>
                     <span>Services</span>
                 </a>
-            </li><!-- End Contact Page Nav -->
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="~/OrderServices/index">
-                    <i class="bi bi-envelope"></i>
+                    <i class="bi bi-cart-check"></i>
                     <span>Service Orders</span>
                 </a>
-            </li><!-- End Contact Page Nav -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="~/OrderServiceDetails/index">
+                    <i class="bi bi-cart-check"></i>
+                    <span>Service Orders Detail</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="~/Customers/index">
-                    <i class="bi bi-envelope"></i>
+                    <i class="bi bi-person-check"></i>
                     <span>Customers</span>
                 </a>
-            </li><!-- End Contact Page Nav -->
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="~/Products/index">
-                    <i class="bi bi-envelope"></i>
+                    <i class="bi bi-cart"></i>
                     <span>Products</span>
                 </a>
-            </li><!-- End Contact Page Nav -->
+            </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-register.html">
-                    <i class="bi bi-card-list"></i>
-                    <span>Register</span>
-                </a>
-            </li><!-- End Register Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-login.html">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                    <span>Login</span>
-                </a>
-            </li><!-- End Login Page Nav -->
 
 
         </ul>
@@ -248,10 +239,6 @@
             &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
             Designed by <a href="https://ExcelOnServices.com/">ExcelOnServices</a>
         </div>
     </footer><!-- End Footer -->
@@ -278,6 +265,12 @@
     {
         @Html.AntiForgeryToken()
     }
+
+    <script>
+        function tai_lai_trang() {
+            alert('ok')
+        }
+    </script>
 </body>
 
 </html>

@@ -59,10 +59,13 @@ namespace ExcelOnServices.Migrations
                         Total = c.Single(nullable: false),
                         Paid = c.Single(nullable: false),
                         Debt = c.Single(nullable: false),
+                        EmployeeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: true)
-                .Index(t => t.CustomerId);
+                .ForeignKey("dbo.Employees", t => t.EmployeeId, cascadeDelete: true)
+                .Index(t => t.CustomerId)
+                .Index(t => t.EmployeeId);
             
             CreateTable(
                 "dbo.OrderServiceDetails",
@@ -111,11 +114,13 @@ namespace ExcelOnServices.Migrations
             DropForeignKey("dbo.Products", "CustomerId", "dbo.Customers");
             DropForeignKey("dbo.OrderServiceDetails", "ServiceId", "dbo.Services");
             DropForeignKey("dbo.OrderServiceDetails", "OrderServiceId", "dbo.OrderServices");
+            DropForeignKey("dbo.OrderServices", "EmployeeId", "dbo.Employees");
             DropForeignKey("dbo.OrderServices", "CustomerId", "dbo.Customers");
             DropForeignKey("dbo.Employees", "DepartmentId", "dbo.Departments");
             DropIndex("dbo.Products", new[] { "CustomerId" });
             DropIndex("dbo.OrderServiceDetails", new[] { "ServiceId" });
             DropIndex("dbo.OrderServiceDetails", new[] { "OrderServiceId" });
+            DropIndex("dbo.OrderServices", new[] { "EmployeeId" });
             DropIndex("dbo.OrderServices", new[] { "CustomerId" });
             DropIndex("dbo.Employees", new[] { "DepartmentId" });
             DropTable("dbo.Products");

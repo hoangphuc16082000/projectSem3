@@ -6,14 +6,14 @@ namespace ExcelOnServices.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
     public sealed partial class mot : IMigrationMetadata
     {
         private readonly ResourceManager Resources = new ResourceManager(typeof(mot));
         
         string IMigrationMetadata.Id
         {
-            get { return "202304141449292_mot"; }
+            get { return "202304170235509_mot"; }
         }
         
         string IMigrationMetadata.Source
